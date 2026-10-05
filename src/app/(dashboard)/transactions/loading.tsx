@@ -1,0 +1,1 @@
+export default function LoadingTransactions() { return <div className="space-y-5 animate-pulse"><div className="h-9 w-56 rounded bg-slate-200" /><div className="h-[480px] rounded-xl bg-white" /></div>; }

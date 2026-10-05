@@ -1,0 +1,1 @@
+export default function LoadingPos() { return <div className="space-y-5 animate-pulse"><div className="h-9 w-56 rounded bg-slate-200" /><div className="h-14 rounded-xl bg-white" /><div className="grid gap-5 xl:grid-cols-[1fr_370px]"><div className="h-[600px] rounded-xl bg-white" /><div className="h-[500px] rounded-xl bg-white" /></div></div>; }

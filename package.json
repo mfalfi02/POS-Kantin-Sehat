@@ -1,0 +1,45 @@
+{
+  "name": "warung-pos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test:ai": "NODE_PATH=./node_modules/next/dist/compiled TS_NODE_BASEURL=. node --conditions=react-server --test --require tsx/cjs --require tsconfig-paths/register tests/ai-assistant.test.cjs",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "@hookform/resolvers": "^5.9.1",
+    "@prisma/client": "^6.11.1",
+    "bcryptjs": "^3.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jose": "^6.0.11",
+    "lucide-react": "^0.468.0",
+    "next": "^15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.89.0",
+    "recharts": "^2.15.3",
+    "tailwind-merge": "^3.3.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.5.27",
+    "prisma": "^6.11.1",
+    "tailwindcss": "^4.1.10",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
