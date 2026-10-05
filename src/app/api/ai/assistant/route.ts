@@ -1,6 +1,5 @@
 import { getSession } from "@/lib/auth/session";
 import { assistantRequestSchema } from "@/features/ai/schemas/assistant-schema";
-import { askSalesAssistant } from "@/features/ai/services/ask-sales-assistant";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -49,6 +48,7 @@ export async function POST(request: Request) {
   if (!parsed.success) return Response.json({ error: "Pertanyaan atau konteks percakapan tidak valid. Maksimal 12 pesan konteks." }, { status: 400, headers: jsonHeaders });
 
   try {
+    const { askSalesAssistant } = await import("@/features/ai/services/ask-sales-assistant");
     const result = await askSalesAssistant(parsed.data);
     return Response.json(result, { status: 200, headers: jsonHeaders });
   } catch {
